@@ -35,7 +35,7 @@ import {
 } from '../constants/userConstants'
 
 
-const base_url = "/api/v1";
+const base_url = "https://hackathon-mw.herokuapp.com/api/v1";
 
 export const login = (email, password) => async (dispatch) => {
 

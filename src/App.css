@@ -34,6 +34,22 @@
   color: #E0E0E0;
 }
 
+
+/* set entire body that is webpage */
+.body{
+	padding-top: 21vh;	
+}
+
+.bodyreg{
+	padding-top: 16vh;	
+} 
+
+/* set padding and size of th form */
+.form-containers{
+	border-radius: 10px;
+	padding: 30px;
+}
+
 @media screen and (max-width: 576px) {
   .main-header {
     display: flex;

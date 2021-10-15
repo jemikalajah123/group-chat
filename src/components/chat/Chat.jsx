@@ -11,7 +11,7 @@ export const Chat = ({
     <div className="chat-content d-flex flex-column">
       <div className="name-date d-flex align-items-center">
         <div className="name">{name}</div>
-        <div className="date">{createdAt}</div>
+        <div className="date">{new Date(createdAt).toDateString()}</div>
       </div>
       <div className="chat-message">{text}</div>
     </div>

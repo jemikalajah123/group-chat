@@ -82,8 +82,8 @@ export default  HomeScreen;
 const chats = [
   {
     uname: 'Welcome Bot',
-    createdAt: 'yesterday at 2:29 AM',
-    text: 'Hello 😀, Welcome Here ...... Please send the first Message Here!',
+    createdAt: new Date().toDateString(),
+    text: 'Hello 😀, Welcome Here ...... Please Create or Join any channel to have fun!',
     avatar: "https://media.istockphoto.com/photos/visual-contents-concept-social-networking-service-streaming-video-picture-id1312418309"
   }
 ];

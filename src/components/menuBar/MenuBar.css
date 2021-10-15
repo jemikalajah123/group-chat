@@ -1,0 +1,139 @@
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.modal-dialog .modal-content {
+  background-color: #120F13;
+  border-radius: 24px;
+  padding: 22px 15px;
+}
+
+.channel{
+  color: #E0E0E0;
+}
+
+.modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-footer {
+  border: none;
+}
+
+.modal-content input,
+.modal-content input:focus,
+.modal-content textarea,
+.modal-content textarea:focus {
+  background-color: #3C393F;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+}
+
+.main-section-wrapper {
+  background: #333333;
+}
+
+.aside-header {
+  padding: 17px 28px;
+}
+
+.aside-header .channels-header-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside-header .channels-header-wrapper .plus-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background: #252329;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.aside-header .arrow-wrapper {
+  display: flex;
+  cursor: pointer;
+}
+
+.aside-header .arrow {
+  margin: 0 10px 0 -15px;
+}
+
+.aside-content {
+  padding: 25px 28px;
+}
+
+.aside-footer {
+  padding: 15px 28px;
+  background: #0B090C;
+}
+
+#dropdown-basic {
+  width: 100%;
+  border: none;
+  background-color: unset;
+  padding: 0;
+}
+
+#dropdown-basic:focus,
+#dropdown-basic:focus-visible {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+#dropdown-basic::after {
+  display: none;
+}
+
+#dropdown-menu {
+  background: #252329;
+  border: 1px solid #3C393F;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.035em;
+  color: #E0E0E0;
+  padding: 12px;
+  inset: auto 0px 0px auto !important;
+}
+
+#dropdown-menu hr {
+  margin: 0;
+}
+
+#dropdown-menu a {
+  display: flex;
+  align-items: center;
+  color: #E0E0E0;
+  height: 39.15px;
+  padding-left: 15px;
+}
+
+#dropdown-menu .logout,
+#dropdown-menu .logout:hover {
+  color: #EB5757;
+  padding-top: 15px;
+}
+
+#dropdown-menu a:hover {
+  color: inherit;
+  background-color: inherit;
+}
+
+#dropdown-menu a:first-of-type,
+#dropdown-menu a:first-of-type:hover {
+  color: #E0E0E0;
+  height: 39.15px;
+  background: #3C393F;
+  border-radius: 8px;
+}

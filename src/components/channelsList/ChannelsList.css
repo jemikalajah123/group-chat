@@ -1,0 +1,18 @@
+.channels-list-wrapper .channel-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.channel-initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  background: #252329;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-right: 12px;
+}

@@ -1,0 +1,22 @@
+.search-input-group-wrapper {
+  margin-bottom: 34px;
+}
+
+.search-input-group-wrapper input,
+.search-input-group-wrapper input:focus {
+  background-color: #3C393F;
+  color: #ffffff;
+  box-shadow: none;
+  height: 48px;
+  border-radius: 8px !important;
+  padding-left: 40px;
+}
+
+.search-input-group-wrapper .search-icon {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 40px;
+  z-index: 99;
+  padding-left: 10px;
+}

@@ -1,0 +1,46 @@
+.chat-wrapper img {
+  height: 42px;
+  width: 42px;
+  object-fit: cover;
+  margin-right: 28px;
+  border-radius: 7px;
+}
+
+.chat-content .name-date {
+  margin-bottom: 8px;
+}
+
+.chat-content .name-date .name {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.035em;
+  color: #828282;
+  margin-right: 15px;
+}
+
+.chat-content .name-date .date {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.035em;
+  color: #828282;
+}
+
+.chat-content .chat-message {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.035em;
+  color: #E0E0E0;
+}
+
+@media screen and (max-width: 576px) {
+  .chat-wrapper img {
+    margin-right: 17px;
+  }
+}

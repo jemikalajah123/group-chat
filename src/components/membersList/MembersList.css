@@ -1,0 +1,12 @@
+.members-list-wrapper {
+  margin-top: 40px;
+}
+
+.members-list-wrapper .header {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.members-list-wrapper .member-wrapper {
+  margin-bottom: 32px;
+}

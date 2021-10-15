@@ -1,0 +1,25 @@
+.member-wrapper {
+  width: 100%;
+  cursor: pointer;
+}
+
+.member-wrapper img {
+  height: 42px;
+  width: 42px;
+  object-fit: cover;
+  margin-right: 28px;
+  border-radius: 7px;
+}
+
+.member-wrapper .name {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.035em;
+  color: #828282;
+}
+
+.member-wrapper:hover .name {
+  color: #ffffff;
+}

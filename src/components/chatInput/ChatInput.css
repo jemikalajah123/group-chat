@@ -1,0 +1,11 @@
+.chat-input-group-wrapper input,
+.chat-input-group-wrapper input:focus {
+  background-color: #3C393F;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.chat-input-group-wrapper .input-group-append {
+  border-radius: 0 0.25rem 0.25rem 0;
+  background: #3C393F;
+}

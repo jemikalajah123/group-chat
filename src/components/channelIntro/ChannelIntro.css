@@ -1,0 +1,12 @@
+.channel-intro-wrapper .header {
+  margin-bottom: 17.65px;
+  text-transform: uppercase;
+}
+
+.channel-intro-wrapper .about {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -0.035em;
+  color: #E0E0E0;
+}

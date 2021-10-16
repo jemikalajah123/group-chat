@@ -69,7 +69,7 @@ function HomeScreen() {
         <div className="main-content d-flex flex-column">
           {channelMessage && channelMessage.length > 0 && ( <ChatArea chats={channelMessage} /> )}
           {channelMessage && channelMessage.length === 0 && ( <ChatArea chats={chats} /> )}
-          {channelMessage && channelMessage.length > 0 && (<ChatInput onSubmit={value =>sendMessages(value)} />)}
+          <ChatInput onSubmit={value =>sendMessages(value)} />
         </div>
       </main>
     </div>

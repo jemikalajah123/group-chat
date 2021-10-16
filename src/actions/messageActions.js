@@ -13,17 +13,18 @@ import {
 
 const base_url = "https://hackathon-mw.herokuapp.com/api/v1";
 
-const authAxios = axios.create({
-    headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
-        Accept: "application/json",
-       "Content-Type": "application/json",
-    }
-})
 
 
-export const listMessages = () => async (dispatch) => {
+export const listMessages = () => async (dispatch, getState) => {
     try {
+        const {userLogin : {userInfo}, } = getState();
+        const authAxios = axios.create({
+            headers: {
+                authorization: `Bearer ${userInfo.token}`,
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            }
+        })
         const { data } = await authAxios.get(base_url+`/messages`)
         dispatch({
             type: MESSAGE_LIST_SUCCESS,
@@ -40,9 +41,17 @@ export const listMessages = () => async (dispatch) => {
     }
 }
 
-export const getMessageByChannelId = (id) => async (dispatch) => {
+export const getMessageByChannelId = (id) => async (dispatch, getState) => {
     try {
         dispatch({ type: MESSAGE_LIST_REQUEST })
+        const {userLogin : {userInfo}, } = getState();
+        const authAxios = axios.create({
+            headers: {
+                authorization: `Bearer ${userInfo.token}`,
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            }
+        })
 
         const { data } = await authAxios.get(base_url+`/messages/channel/${id}`)
         dispatch({
@@ -60,8 +69,17 @@ export const getMessageByChannelId = (id) => async (dispatch) => {
     }
 }
 
-export const sendMessage = (value) => async (dispatch) => {
+export const sendMessage = (value) => async (dispatch, getState) => {
     try {
+
+        const {userLogin : {userInfo}, } = getState();
+        const authAxios = axios.create({
+            headers: {
+                authorization: `Bearer ${userInfo.token}`,
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            }
+        })
 
         const { data } = await authAxios.post(base_url+`/messages`, value)
         console.log(data);

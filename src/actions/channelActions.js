@@ -15,18 +15,18 @@ import {
 
 const base_url = "https://hackathon-mw.herokuapp.com/api/v1";
 
-const authAxios = axios.create({
-    headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`,
-        Accept: "application/json",
-        "Content-Type": "application/json",
-    }
-})
 
 
-export const listChannels = () => async (dispatch) => {
+export const listChannels = () => async (dispatch, getState) => {
     try {
-
+        const {userLogin : {userInfo}, } = getState();
+        const authAxios = axios.create({
+            headers: {
+                authorization: `Bearer ${userInfo.token}`,
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            }
+        })
         const { data } = await authAxios.get(base_url+`/channels`)
         dispatch({
             type: CHANNEL_LIST_SUCCESS,
@@ -43,8 +43,16 @@ export const listChannels = () => async (dispatch) => {
     }
 }
 
-export const getChannelBYId = (id) => async (dispatch) => {
+export const getChannelBYId = (id) => async (dispatch, getState) => {
     try {
+        const {userLogin : {userInfo}, } = getState();
+        const authAxios = axios.create({
+            headers: {
+                authorization: `Bearer ${userInfo.token}`,
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            }
+        })
 
         const { data } = await authAxios.get(base_url+`/channels/${id}`)
         dispatch({
@@ -62,7 +70,7 @@ export const getChannelBYId = (id) => async (dispatch) => {
     }
 }
 
-export const selectChannel = (data) => async (dispatch) => {
+export const selectChannel = (data) => async (dispatch,) => {
     try {
 
         dispatch({
@@ -80,8 +88,17 @@ export const selectChannel = (data) => async (dispatch) => {
     }
 }
 
-export const createChannel = (value) => async (dispatch) => {
+export const createChannel = (value) => async (dispatch, getState) => {
     try {
+
+        const {userLogin : {userInfo}, } = getState();
+        const authAxios = axios.create({
+            headers: {
+                authorization: `Bearer ${userInfo.token}`,
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            }
+        })
 
         const { data } = await authAxios.post(base_url+`/channels`, value)
         dispatch({
@@ -99,8 +116,17 @@ export const createChannel = (value) => async (dispatch) => {
     }
 }
 
-export const searchChannel = (string) => async (dispatch) => {
+export const searchChannel = (string) => async (dispatch, getState) => {
     try {
+
+        const {userLogin : {userInfo}, } = getState();
+        const authAxios = axios.create({
+            headers: {
+                authorization: `Bearer ${userInfo.token}`,
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            }
+        })
 
         const { data } = await authAxios.get(base_url+`/channel/search?string=${string}`)
         dispatch({

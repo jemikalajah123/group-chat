@@ -15,7 +15,9 @@ const base_url = "https://hackathon-mw.herokuapp.com/api/v1";
 
 const authAxios = axios.create({
     headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`
+        authorization: `Bearer ${localStorage.getItem('token')}`,
+        Accept: "application/json",
+       "Content-Type": "application/json",
     }
 })
 

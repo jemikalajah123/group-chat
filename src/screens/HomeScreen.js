@@ -69,7 +69,7 @@ function HomeScreen() {
         <div className="main-content d-flex flex-column">
           {channelMessage && channelMessage.length > 0 && ( <ChatArea chats={channelMessage} /> )}
           {channelMessage && channelMessage.length === 0 && ( <ChatArea chats={chats} /> )}
-          <ChatInput onSubmit={value =>sendMessages(value)} />
+          {channelMessage && channelMessage.length > 0 && (<ChatInput onSubmit={value =>sendMessages(value)} />)}
         </div>
       </main>
     </div>
@@ -81,9 +81,9 @@ export default  HomeScreen;
 
 const chats = [
   {
-    uname: 'Welcome Bot',
+    name: 'Welcome Bot',
     createdAt: new Date().toDateString(),
-    text: 'Hello 😀, Welcome Here ...... Please Create or Join any channel to have fun!',
+    text: 'Hello 😀, Welcome Here ...... Please Create or Enter any channel to have fun!',
     avatar: "https://media.istockphoto.com/photos/visual-contents-concept-social-networking-service-streaming-video-picture-id1312418309"
   }
 ];

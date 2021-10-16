@@ -38,7 +38,13 @@ export const channelListReducer = (state = { channel: [], activeChannel: [], fil
             filterChannel: action.payload.data,
         }
 
-        case CHANNEL_GET_SUCCESS:
+        case CHANNEL_GET_SUCCESS:   
+            return {
+                ...state,
+                loading: false,
+                channelID: action.payload.data,
+            }
+
         case CHANNEL_CREATE_SUCCESS:    
             return {
                 ...state,

@@ -44,6 +44,7 @@ export const channelListReducer = (state = { channel: [], activeChannel: [], fil
                 ...state,
                 loading: false,
                 channelID: action.payload.data,
+                channel: [action.payload.data, ...state.channel]
             }
 
         case CHANNEL_LIST_FAIL:
